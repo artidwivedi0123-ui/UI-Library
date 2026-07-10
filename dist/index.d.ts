@@ -42,8 +42,8 @@ declare function Badge({ className, variant, asChild, ...props }: React.Componen
 }): React.JSX.Element;
 
 declare const InputVariants: (props?: ({
-    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined;
-    size?: "default" | "sm" | "lg" | "icon" | null | undefined;
+    variant?: "outline" | "ghost" | "filled" | "flushed" | "unstyled" | null | undefined;
+    size?: "sm" | "lg" | "xs" | "md" | "xl" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
 type InputProps = React.ComponentPropsWithoutRef<"input"> & VariantProps<typeof InputVariants> & {

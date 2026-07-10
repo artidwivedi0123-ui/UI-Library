@@ -104,27 +104,43 @@ function Badge({
 // src/components/primitives/Input/Input.variant.ts
 import { cva as cva4 } from "class-variance-authority";
 var InputVariants = cva4(
-  "inline-flex items-center justify-center gap-[var(--cuix-spacing-sm)] whitespace-nowrap rounded-[var(--cuix-radius-md)] text-[var(--cuix-font-size-sm)] font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 outline-none focus-visible:border-[var(--cuix-colors-ring)] focus-visible:ring-[var(--cuix-colors-ring)]/50 focus-visible:ring-[3px] aria-invalid:ring-[var(--cuix-colors-destructive)]/20 aria-invalid:border-[var(--cuix-colors-destructive)]",
+  [
+    "flex",
+    "w-full",
+    "rounded-[var(--cuix-radius-md)]",
+    "border",
+    "transition-colors",
+    "outline-none",
+    "placeholder:text-[var(--cuix-colors-muted-foreground)]",
+    "disabled:cursor-not-allowed",
+    "disabled:opacity-50",
+    "focus-visible:ring-2",
+    "focus-visible:ring-[var(--cuix-colors-ring)]",
+    "focus-visible:border-[var(--cuix-colors-ring)]",
+    "aria-invalid:border-[var(--cuix-colors-destructive)]",
+    "aria-invalid:ring-2",
+    "aria-invalid:ring-[var(--cuix-colors-destructive)]/20"
+  ].join(" "),
   {
     variants: {
       variant: {
-        default: "bg-[var(--cuix-colors-primary)] text-[var(--cuix-colors-primary-foreground)] shadow-[var(--cuix-shadow-sm)] hover:bg-[var(--cuix-colors-primary)]/90",
-        destructive: "bg-[var(--cuix-colors-destructive)] text-[var(--cuix-colors-destructive-foreground)] shadow-[var(--cuix-shadow-sm)] hover:bg-[var(--cuix-colors-destructive)]/90 focus-visible:ring-[var(--cuix-colors-destructive)]/20",
-        outline: "border border-[var(--cuix-colors-border)] bg-[var(--cuix-colors-background)] shadow-[var(--cuix-shadow-sm)] hover:bg-[var(--cuix-colors-accent)] hover:text-[var(--cuix-colors-accent-foreground)]",
-        secondary: "bg-[var(--cuix-colors-secondary)] text-[var(--cuix-colors-secondary-foreground)] shadow-[var(--cuix-shadow-sm)] hover:bg-[var(--cuix-colors-secondary)]/80",
-        ghost: "hover:bg-[var(--cuix-colors-accent)] hover:text-[var(--cuix-colors-accent-foreground)]",
-        link: "text-[var(--cuix-colors-primary)] underline-offset-4 hover:underline"
+        outline: "border-[var(--cuix-colors-border)] bg-[var(--cuix-colors-background)] text-[var(--cuix-colors-foreground)]",
+        filled: "border-transparent bg-[var(--cuix-colors-muted)] text-[var(--cuix-colors-foreground)]",
+        flushed: "rounded-none border-x-0 border-t-0 border-b border-[var(--cuix-colors-border)] bg-transparent px-0",
+        ghost: "border-transparent bg-transparent shadow-none",
+        unstyled: "border-0 rounded-none bg-transparent shadow-none p-0"
       },
       size: {
-        default: "h-9 px-[var(--cuix-spacing-md)] py-[var(--cuix-spacing-sm)] has-[>svg]:px-3",
-        sm: "h-8 rounded-[var(--cuix-radius-md)] gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-[var(--cuix-radius-md)] px-[var(--cuix-spacing-lg)] has-[>svg]:px-[var(--cuix-spacing-md)]",
-        icon: "size-9"
+        xs: "h-8 px-2 text-xs",
+        sm: "h-9 px-3 text-sm",
+        md: "h-10 px-3 text-sm",
+        lg: "h-11 px-4 text-base",
+        xl: "h-12 px-5 text-lg"
       }
     },
     defaultVariants: {
-      variant: "default",
-      size: "default"
+      variant: "outline",
+      size: "md"
     }
   }
 );
