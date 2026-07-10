@@ -21,18 +21,16 @@ export const InputVariants = cva(
   {
     variants: {
       variant: {
+        default :
+          "bg-[var(--cuix-colors-primary)] text-[var(--cuix-colors-primary-foreground)] shadow-[var(--cuix-shadow-sm)] hover:bg-[var(--cuix-colors-primary)]/90",
         outline:
           "border-[var(--cuix-colors-border)] bg-[var(--cuix-colors-background)] text-[var(--cuix-colors-foreground)]",
-
         filled:
           "border-transparent bg-[var(--cuix-colors-muted)] text-[var(--cuix-colors-foreground)]",
-
         flushed:
           "rounded-none border-x-0 border-t-0 border-b border-[var(--cuix-colors-border)] bg-transparent px-0",
-
         ghost:
           "border-transparent bg-transparent shadow-none",
-
         unstyled:
           "border-0 rounded-none bg-transparent shadow-none p-0",
       },
@@ -47,7 +45,7 @@ export const InputVariants = cva(
     },
 
     defaultVariants: {
-      variant: "filled",
+      variant: "default",
       size: "md",
     },
   }
