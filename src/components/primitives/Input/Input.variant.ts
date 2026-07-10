@@ -47,7 +47,7 @@ export const InputVariants = cva(
     },
 
     defaultVariants: {
-      variant: "outline",
+      variant: "filled",
       size: "md",
     },
   }

@@ -206,7 +206,7 @@ var InputVariants = (0, import_class_variance_authority4.cva)(
       }
     },
     defaultVariants: {
-      variant: "outline",
+      variant: "filled",
       size: "md"
     }
   }

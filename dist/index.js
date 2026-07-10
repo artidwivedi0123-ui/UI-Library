@@ -139,7 +139,7 @@ var InputVariants = cva4(
       }
     },
     defaultVariants: {
-      variant: "outline",
+      variant: "filled",
       size: "md"
     }
   }
