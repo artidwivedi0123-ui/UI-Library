@@ -101,10 +101,53 @@ function Badge({
   return /* @__PURE__ */ jsx2(Comp, { "data-slot": "badge", className: cn(badgeVariants({ variant }), className), ...props });
 }
 
+// src/components/primitives/Input/Input.variant.ts
+import { cva as cva4 } from "class-variance-authority";
+var InputVariants = cva4(
+  "inline-flex items-center justify-center gap-[var(--cuix-spacing-sm)] whitespace-nowrap rounded-[var(--cuix-radius-md)] text-[var(--cuix-font-size-sm)] font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 outline-none focus-visible:border-[var(--cuix-colors-ring)] focus-visible:ring-[var(--cuix-colors-ring)]/50 focus-visible:ring-[3px] aria-invalid:ring-[var(--cuix-colors-destructive)]/20 aria-invalid:border-[var(--cuix-colors-destructive)]",
+  {
+    variants: {
+      variant: {
+        default: "bg-[var(--cuix-colors-primary)] text-[var(--cuix-colors-primary-foreground)] shadow-[var(--cuix-shadow-sm)] hover:bg-[var(--cuix-colors-primary)]/90",
+        destructive: "bg-[var(--cuix-colors-destructive)] text-[var(--cuix-colors-destructive-foreground)] shadow-[var(--cuix-shadow-sm)] hover:bg-[var(--cuix-colors-destructive)]/90 focus-visible:ring-[var(--cuix-colors-destructive)]/20",
+        outline: "border border-[var(--cuix-colors-border)] bg-[var(--cuix-colors-background)] shadow-[var(--cuix-shadow-sm)] hover:bg-[var(--cuix-colors-accent)] hover:text-[var(--cuix-colors-accent-foreground)]",
+        secondary: "bg-[var(--cuix-colors-secondary)] text-[var(--cuix-colors-secondary-foreground)] shadow-[var(--cuix-shadow-sm)] hover:bg-[var(--cuix-colors-secondary)]/80",
+        ghost: "hover:bg-[var(--cuix-colors-accent)] hover:text-[var(--cuix-colors-accent-foreground)]",
+        link: "text-[var(--cuix-colors-primary)] underline-offset-4 hover:underline"
+      },
+      size: {
+        default: "h-9 px-[var(--cuix-spacing-md)] py-[var(--cuix-spacing-sm)] has-[>svg]:px-3",
+        sm: "h-8 rounded-[var(--cuix-radius-md)] gap-1.5 px-3 has-[>svg]:px-2.5",
+        lg: "h-10 rounded-[var(--cuix-radius-md)] px-[var(--cuix-spacing-lg)] has-[>svg]:px-[var(--cuix-spacing-md)]",
+        icon: "size-9"
+      }
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default"
+    }
+  }
+);
+
+// src/components/primitives/Input/Input.tsx
+import { Slot as Slot3 } from "@radix-ui/react-slot";
+import { jsx as jsx3 } from "react/jsx-runtime";
+var Input = ({ className, variant, size, asChild = false, ...props }) => {
+  const Comp = asChild ? Slot3 : "input";
+  return /* @__PURE__ */ jsx3(
+    Comp,
+    {
+      "data-slot": "input",
+      className: cn(InputVariants({ variant, size, className })),
+      ...props
+    }
+  );
+};
+
 // src/components/layout/card/card.tsx
 import * as React from "react";
-import { jsx as jsx3 } from "react/jsx-runtime";
-var Card = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx3(
+import { jsx as jsx4 } from "react/jsx-runtime";
+var Card = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx4(
   "div",
   {
     ref,
@@ -116,7 +159,7 @@ var Card = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ js
   }
 ));
 Card.displayName = "Card";
-var CardHeader = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx3(
+var CardHeader = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx4(
   "div",
   {
     ref,
@@ -125,7 +168,7 @@ var CardHeader = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__
   }
 ));
 CardHeader.displayName = "CardHeader";
-var CardTitle = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx3(
+var CardTitle = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx4(
   "div",
   {
     ref,
@@ -134,7 +177,7 @@ var CardTitle = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ 
   }
 ));
 CardTitle.displayName = "CardTitle";
-var CardDescription = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx3(
+var CardDescription = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx4(
   "div",
   {
     ref,
@@ -143,9 +186,9 @@ var CardDescription = React.forwardRef(({ className, ...props }, ref) => /* @__P
   }
 ));
 CardDescription.displayName = "CardDescription";
-var CardContent = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx3("div", { ref, className: cn("p-6 pt-0", className), ...props }));
+var CardContent = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx4("div", { ref, className: cn("p-6 pt-0", className), ...props }));
 CardContent.displayName = "CardContent";
-var CardFooter = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx3(
+var CardFooter = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx4(
   "div",
   {
     ref,
@@ -369,7 +412,7 @@ function applyRuntimeThemeUpdate(theme) {
 }
 
 // src/theme/ThemeProvider.tsx
-import { jsx as jsx4 } from "react/jsx-runtime";
+import { jsx as jsx5 } from "react/jsx-runtime";
 function ThemeProvider({
   children,
   theme = {}
@@ -378,7 +421,7 @@ function ThemeProvider({
   useEffect(() => {
     applyRuntimeThemeUpdate(mergedTheme);
   }, [mergedTheme]);
-  return /* @__PURE__ */ jsx4(ThemeContext.Provider, { value: mergedTheme, children });
+  return /* @__PURE__ */ jsx5(ThemeContext.Provider, { value: mergedTheme, children });
 }
 
 // src/theme/useTheme.ts
@@ -395,6 +438,8 @@ export {
   CardFooter,
   CardHeader,
   CardTitle,
+  Input,
+  InputVariants,
   ThemeContext,
   ThemeProvider,
   applyRuntimeThemeUpdate,

@@ -41,6 +41,17 @@ declare function Badge({ className, variant, asChild, ...props }: React.Componen
     asChild?: boolean;
 }): React.JSX.Element;
 
+declare const InputVariants: (props?: ({
+    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined;
+    size?: "default" | "sm" | "lg" | "icon" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+
+type InputProps = React.ComponentPropsWithoutRef<"input"> & VariantProps<typeof InputVariants> & {
+    asChild?: boolean;
+};
+
+declare const Input: ({ className, variant, size, asChild, ...props }: InputProps) => React.JSX.Element;
+
 declare const Card: React.ForwardRefExoticComponent<React.HTMLAttributes<HTMLDivElement> & React.RefAttributes<HTMLDivElement>>;
 declare const CardHeader: React.ForwardRefExoticComponent<React.HTMLAttributes<HTMLDivElement> & React.RefAttributes<HTMLDivElement>>;
 declare const CardTitle: React.ForwardRefExoticComponent<React.HTMLAttributes<HTMLDivElement> & React.RefAttributes<HTMLDivElement>>;
@@ -167,4 +178,4 @@ declare function normalizeTheme(theme: CoreUIXTheme): CoreUIXTheme;
 
 declare function applyRuntimeThemeUpdate(theme: CoreUIXTheme): void;
 
-export { Badge, Button, type ButtonProps, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, type CoreUIXTheme, type DeepPartial, type DesignTokenMap, ThemeContext, ThemeProvider, applyRuntimeThemeUpdate, applyTheme, breakpoints, buttonVariants, cn, colors, createTheme, createVariants, deepMerge, defaultTheme, flex, generateCssVariables, mergeTheme, normalizeTheme, radius, shadow, spacing, typography, useTheme, zIndex };
+export { Badge, Button, type ButtonProps, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, type CoreUIXTheme, type DeepPartial, type DesignTokenMap, Input, type InputProps, InputVariants, ThemeContext, ThemeProvider, applyRuntimeThemeUpdate, applyTheme, breakpoints, buttonVariants, cn, colors, createTheme, createVariants, deepMerge, defaultTheme, flex, generateCssVariables, mergeTheme, normalizeTheme, radius, shadow, spacing, typography, useTheme, zIndex };
