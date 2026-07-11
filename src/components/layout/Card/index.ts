@@ -5,3 +5,4 @@ export { CardDescription } from "@/components/layout/Card/CardDescription";
 export { CardContent } from "@/components/layout/Card/CardContent";
 export { CardFooter } from "@/components/layout/Card/CardFooter";
 
+export * from "@/components/layout/Card/Card.type";
