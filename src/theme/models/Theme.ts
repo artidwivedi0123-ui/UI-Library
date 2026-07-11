@@ -76,7 +76,7 @@ export interface CoreUIXTheme {
     col: string;
     center: string;
     between: string;
-    around: string;
+    around: string; 
     evenly: string;
     start: string;
     end: string;
