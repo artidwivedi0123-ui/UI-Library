@@ -6,3 +6,7 @@ import { HTMLAttributes } from "react";
 
 export interface ModalProps
   extends HTMLAttributes<HTMLDivElement>, VariantProps<typeof modalVariants> {}
+
+
+export interface ModalProps
+  extends React.ComponentPropsWithoutRef<typeof Dialog.Root> {}
