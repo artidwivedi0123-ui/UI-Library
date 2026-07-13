@@ -37,8 +37,8 @@ export const badgeVariants = cva(
       },
       size: {
         sm: "h-5 px-2 text-[var(--cuix-font-size-xs)]",
-        md: "h-6 px-2.5 text-[var(--cuix-font-size-sm)]",
-        lg: "h-7 px-3 text-[var(--cuix-font-size-md)]",
+        md: "h-6 px-2.5 text-[var(--cuix-font-size-md)]",
+        lg: "h-7 px-3 text-[var(--cuix-font-size-lg)]",
       },
     },
 
