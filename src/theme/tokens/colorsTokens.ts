@@ -13,7 +13,7 @@ export const colors: CoreUIXTheme["colors"] = {
   destructive: "#dc2626",
   destructiveForeground: "#ffffff",
 
-  border: "#e5e7eb",
+  border: "#303a3bff",
   input: "#e5e7eb",
 
   ring: "#2563eb",
