@@ -36,11 +36,11 @@ export const InputVariants = cva(
       },
 
       size: {
-        xs: "h-8 px-2 var(--cuix-font-size-xs)",
-        sm: "h-9 px-3 var(--cuix-font-size-sm)",
-        md: "h-10 px-3 var(--cuix-font-size-md)",
-        lg: "h-11 px-4 var(--cuix-font-size-lg)",
-        xl: "h-12 px-5 var(--cuix-font-size-xl)",
+        xs: "h-8 px-2 text-[var(--cuix-font-size-xs)]",
+        sm: "h-9 px-3 text-var(--cuix-font-size-sm)]",
+        md: "h-10 px-3 text-var(--cuix-font-size-md)]",
+        lg: "h-11 px-4 text-var(--cuix-font-size-lg)]",
+        xl: "h-12 px-5 text-var(--cuix-font-size-xl)]",
       },
     },
 
