@@ -31,16 +31,16 @@ export const badgeVariants = cva(
           "bg-[var(--cuix-colors-success)] text-[var(--cuix-colors-success-foreground)] border-transparent",
 
         warning:
-          "bg-[var(--cuix-colors-warning)] text-[var(--cuix-colors-warning-foreground)] border-transparent",
+          "bg-[var(--cuix-colors-warning)] text-[var(--cuix-colors-warning-foreground)] border-var[(--cuix-transparent)]",
 
         info:
-          "bg-[var(--cuix-colors-info)] text-[var(--cuix-colors-info-foreground)] border-transparent",
+          "bg-[var(--cuix-colors-info)] text-[var(--cuix-colors-info-foreground)] border-var[(--cuix-transparent)]",
       },
 
       size: {
-        sm: "h-5 px-2 text-xs",
-        md: "h-6 px-2.5 text-sm",
-        lg: "h-7 px-3 text-sm",
+        sm: "h-5 px-2-[var(--cuix-font-size-xs)]",
+        md: "h-6 px-2.5-[var(--cuix-font-size-xs)]",
+        lg: "h-7 px-3-[var(--cuix-font-size-xs)]",
       },
     },
 

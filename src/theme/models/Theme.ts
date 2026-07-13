@@ -68,6 +68,7 @@ export interface CoreUIXTheme {
       sm: string;
       md: string;
       lg: string;
+      xl:string;
     };
     lineHeight: string;
   };
@@ -85,4 +86,5 @@ export interface CoreUIXTheme {
     inline: string;
     inlineCenter: string;
   };
+
 }

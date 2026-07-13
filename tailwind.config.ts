@@ -79,6 +79,7 @@ const config: Omit<Config, "content"> & { content: Config["content"] } = {
         sm: "var(--cuix-font-size-sm)",
         md: "var(--cuix-font-size-md)",
         lg: "var(--cuix-font-size-lg)",
+        xl:"var(--cuix-font-size-xl)",
       },
       fontFamily: {
         body: "var(--cuix-font-family-body)",
