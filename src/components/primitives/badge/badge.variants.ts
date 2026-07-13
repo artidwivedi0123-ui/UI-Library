@@ -36,6 +36,7 @@ export const badgeVariants = cva(
         info: "bg-[var(--cuix-colors-info)] text-[var(--cuix-colors-info-foreground)] border-transparent",
       },
       size: {
+        default:"h-3 px-1.5",
         sm: "h-5 px-2 text-[var(--cuix-font-size-xs)]",
         md: "h-6 px-2.5 text-[var(--cuix-font-size-md)]",
         lg: "h-7 px-3 text-[var(--cuix-font-size-lg)]",
@@ -44,7 +45,7 @@ export const badgeVariants = cva(
 
     defaultVariants: {
       variant: "default",
-      size: "md",
+      size: "default",
     },
   },
 );
