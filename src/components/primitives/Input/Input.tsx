@@ -8,7 +8,7 @@ import type { InputProps } from "@/components/primitives/Input/Input.type";
 function Input({
   className,
   variant,
-  size,
+  inputSize,
   asChild = false,
   ...props
 }: InputProps) {
@@ -16,11 +16,10 @@ function Input({
 
   return (
     <Comp
-      data-slot="input"
       className={cn(
         InputVariants({
           variant,
-          size,
+          inputSize,
         }),
         className
       )}
@@ -28,5 +27,3 @@ function Input({
     />
   );
 }
-
-export { Input };
