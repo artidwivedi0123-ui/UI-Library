@@ -27,3 +27,5 @@ function Input({
     />
   );
 }
+
+export {Input};
