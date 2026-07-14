@@ -44,7 +44,7 @@ export const InputVariants = cva(
           "border-0 rounded-none bg-transparent shadow-none p-0",
       },
 
-      inputSize: {
+      inputsize: {
         xs: "h-8 px-2 text-[var(--cuix-font-size-xs)]",
         sm: "h-9 px-3 text-[var(--cuix-font-size-sm)]",
         md: "h-10 px-3 text-[var(--cuix-font-size-md)]",
@@ -55,7 +55,7 @@ export const InputVariants = cva(
 
     defaultVariants: {
       variant: "default",
-      inputSize: "md",
+      inputsize: "md",
     },
   }
 );

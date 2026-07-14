@@ -8,7 +8,7 @@ import type { InputProps } from "@/components/primitives/Input/Input.type";
 function Input({
   className,
   variant,
-  inputSize,
+  inputsize,
   asChild = false,
   ...props
 }: InputProps) {
@@ -19,7 +19,7 @@ function Input({
       className={cn(
         InputVariants({
           variant,
-          inputSize,
+          inputsize,
         }),
         className
       )}
