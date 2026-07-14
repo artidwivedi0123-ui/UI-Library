@@ -5,5 +5,6 @@ export { DialogTitle } from "@/components/layout/Dialog/DialogTitle";
 export { DialogDescription } from "@/components/layout/Dialog/DialogDescription";
 export { DialogContent } from "@/components/layout/Dialog/DialogContent";
 export { DialogFooter } from "@/components/layout/Dialog/DialogFooter";
+export {DialogHeader} from  "@/components/layout/Dialog/DialogHeader";
 
 export * from "@/components/layout/Dialog/Dialog.type";
