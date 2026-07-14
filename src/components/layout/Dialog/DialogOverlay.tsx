@@ -1,8 +1,5 @@
-// Background overlay displayed behind the dialog.
-
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-
 import { cn } from "@/utils/cn";
 
 const DialogOverlay = React.forwardRef<
@@ -12,17 +9,13 @@ const DialogOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-      "fixed inset-0 z-50 bg-white/50",
-      "data-[state=open]:animate-in",
-      "data-[state=closed]:animate-out",
-      "data-[state=open]:fade-in-0",
-      "data-[state=closed]:fade-out-0",
+      "fixed inset-0 z-50 bg-gray/50",
       className
     )}
     {...props}
   />
 ));
 
-DialogOverlay.displayName = "DialogOverlay";
+DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
 
 export { DialogOverlay };

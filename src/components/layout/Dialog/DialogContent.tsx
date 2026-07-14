@@ -45,21 +45,16 @@ const DialogContent = React.forwardRef<
         {children}
 
         <DialogPrimitive.Close
-          className={cn(
-            "absolute right-4 top-4 opacity-70 transition-opacity hover:opacity-100"
-          )}
+          className="absolute right-4 top-4 opacity-70 transition-opacity hover:opacity-100"
         >
           <X className="h-4 w-4" />
-
-          <span className="sr-only">
-            Close
-          </span>
+          <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       </DialogPrimitive.Content>
     </DialogPortal>
   )
 );
 
-DialogContent.displayName = "DialogContent";
+DialogContent.displayName = DialogPrimitive.Content.displayName;
 
 export { DialogContent };
