@@ -1,4 +1,5 @@
-export { Dialog } from "@/components/layout/Dialog/Dialog";
+export * from "@/components/layout/Dialog/Dialog";
+// export {DialogTrigger} from  "@/components/layout/Dialog/Dialog"
 export { DialogOverlay } from "@/components/layout/Dialog/DialogOverlay";
 export { DialogTitle } from "@/components/layout/Dialog/DialogTitle";
 export { DialogDescription } from "@/components/layout/Dialog/DialogDescription";
