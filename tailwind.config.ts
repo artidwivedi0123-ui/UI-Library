@@ -23,6 +23,7 @@ const config: Omit<Config, "content"> & { content: Config["content"] } = {
         ring: "var(--cuix-colors-ring)",
         background: "var(--cuix-colors-background)",
         foreground: "var(--cuix-colors-foreground)",
+        transparent: "var(--cuix-colors-transparent)",
 
         primary: {
           DEFAULT: "var(--cuix-colors-primary)",
@@ -69,6 +70,8 @@ const config: Omit<Config, "content"> & { content: Config["content"] } = {
         sm: "var(--cuix-spacing-sm)",
         md: "var(--cuix-spacing-md)",
         lg: "var(--cuix-spacing-lg)",
+        tight: "var(--cuix-spacing-tight)",
+        normal:"var(--cuix-spacing-normal)",
       },
       boxShadow: {
         sm: "var(--cuix-shadow-sm)",
@@ -80,14 +83,42 @@ const config: Omit<Config, "content"> & { content: Config["content"] } = {
         md: "var(--cuix-font-size-md)",
         lg: "var(--cuix-font-size-lg)",
         xl:"var(--cuix-font-size-xl)",
+        tight:"var(--cuix-font-size-tight)",
+      },
+       fontWeight: {
+        medium: "var(--cuix-font-weight-medium)",
+        semibold: "var(--cuix-font-weight-semibold)",
+      },
+      letterSpacing: {
+        normal: "var(--cuix-letter-spacing-normal)",
+        tight:  "var(--cuix-letter-spacing-tight)",
       },
       fontFamily: {
         body: "var(--cuix-font-family-body)",
         heading: "var(--cuix-font-family-heading)",
       },
+      lineHeight: {
+        tight: "var(--cuix-line-height-tight)",
+      },
       zIndex: {
         modal: "var(--cuix-z-index-modal)",
         tooltip: "var(--cuix-z-index-tooltip)",
+      },
+      width:{
+        full:"var(--cuix-width-full)",
+        screen:"var(--cuix-width-screen)",
+        auto:"var(--cuix-width-auto)",
+        min:"var(--cuix-width-min)",
+        max:"var(--cuix-width-max)",
+        fit:"var(--cuix-width-fit)",
+      },
+      height:{
+        full:"var(--cuix-height-full)",
+        screen:"var(--cuix-height-screen)",
+        auto:"var(--cuix-height-auto)",
+        min:"var(--cuix-height-min)",
+        max:"var(--cuix-height-max)",
+        fit:"var(--cuix-height-fit)",
       },
       keyframes: {
         "accordion-down": {
@@ -109,3 +140,4 @@ const config: Omit<Config, "content"> & { content: Config["content"] } = {
 };
 
 export default config;
+

@@ -23,6 +23,7 @@
     --cuix-colors-border: #e5e7eb;
     --cuix-colors-input: #e5e7eb;
     --cuix-colors-ring: #2563eb;
+    --cuix-colors-transparent:transparent;
 
     --cuix-radius-sm: 6px;
     --cuix-radius-md: 8px;
@@ -32,6 +33,7 @@
     --cuix-spacing-sm: 8px;
     --cuix-spacing-md: 16px;
     --cuix-spacing-lg: 24px;
+    --cuix-spacing-tight:7px;
 
     --cuix-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --cuix-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -40,7 +42,32 @@
     --cuix-font-size-sm: 14px;
     --cuix-font-size-md: 16px;
     --cuix-font-size-lg: 18px;
-    --cuix-font-size-xl:24px;
+    --cuix-font-size-xl: 24px;
+    --cuix-font-size-tight:10px;
+    --cuix-font-weight-medium:600;
+    --cuix-font-weight-semibold:700;
+
+
+    --cuix-letter-spacing-normal:0em;
+    --cuix-letter-spacing-tight:0.025em;
+
+    --cuix-line-height-tight:1;
+
+    --cuix-width-full:100%;
+    --cuix-width-screen:100vw;
+    --cuix-width-auto:auto;
+    --cuix-width-fit:fit-content;
+    --cuix-width-min:fit-min;
+    --cuix-width-max:fit-max;
+
+    --cuix-height-full:100%;
+    --cuix-height-screen:100vh;
+    --cuix-height-auto:auto;
+    --cuix-height-fit:fit-content;
+    --cuix-height-min:min-content;
+    --cuix-height-max:max-content;
+
+
     --cuix-font-family-body: Inter, sans-serif;
     --cuix-font-family-heading: Inter, sans-serif;
 
@@ -49,6 +76,9 @@
 
     --cuix-breakpoint-sm: 640px;
     --cuix-breakpoint-md: 768px;
+
+
+
   }
 
   .dark {
@@ -80,3 +110,4 @@
     @apply bg-background text-foreground;
   }
 }
+

@@ -6,3 +6,6 @@ export * from "@/theme/tokens/shadowsTokens";
 export * from "@/theme/tokens/breakpointsTokens";
 export * from "@/theme/tokens/flexTokens";
 export * from "@/theme/tokens/zIndexTokens";
+export * from  "@/theme/tokens/letterSpacingToken";
+export *  from  "@/theme/tokens/heightToken";
+export * from "@/theme/tokens/widthToken";

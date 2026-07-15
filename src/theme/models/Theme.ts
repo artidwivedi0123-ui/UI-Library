@@ -86,5 +86,23 @@ export interface CoreUIXTheme {
     inline: string;
     inlineCenter: string;
   };
+  height: {
+    min:string;
+    max:string;
+    fit:string;
+    auto:string;
+    screen:string;
+  };
+  width: {
+    min:string;
+    max:string;
+    auto:string;
+    screen:string;
+    fit:string;
+  };
+  letterSpacing : {
+    normal:string;
+    tight:string;
+  }
 
 }
